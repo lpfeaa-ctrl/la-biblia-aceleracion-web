@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-brand-bg text-slate-100 antialiased overflow-x-hidden selection:bg-brand-cyan selection:text-brand-bg;
+  }
+}
+
+@layer utilities {
+  .text-gradient-cyan-orange {
+    background: linear-gradient(135deg, #00f0ff 0%, #ff4d15 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .text-gradient-white-slate {
+    background: linear-gradient(180deg, #ffffff 0%, #94a3b8 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .border-glow-cyan {
+    box-shadow: 0 0 15px rgba(0, 240, 255, 0.2), inset 0 0 15px rgba(0, 240, 255, 0.1);
+  }
+  
+  .border-glow-orange {
+    box-shadow: 0 0 15px rgba(255, 77, 21, 0.2), inset 0 0 15px rgba(255, 77, 21, 0.1);
+  }
+
+  .grid-bg {
+    background-size: 24px 24px;
+    background-image: radial-gradient(circle, rgba(31, 41, 61, 0.4) 1px, transparent 1px);
+  }
+
+  .grid-bg-dense {
+    background-size: 16px 16px;
+    background-image: linear-gradient(to right, rgba(31, 41, 61, 0.15) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(31, 41, 61, 0.15) 1px, transparent 1px);
+  }
+}

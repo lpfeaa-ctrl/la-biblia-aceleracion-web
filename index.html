@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>La Biblia de la Aceleración Web | Ingeniería de Rendimiento Frontend B2B</title>
+  <meta name="title" content="La Biblia de la Aceleración Web | Ingeniería de Rendimiento Frontend B2B">
+  <meta name="description" content="Guía avanzada de ingeniería de rendimiento frontend B2B por Lorenzo Padilla. Domina Core Web Vitals, Edge computing, resumabilidad, y exprime el silicio en el cliente.">
+  <meta name="keywords" content="frontend performance, web performance, core web vitals, LCP, CLS, resumabilidad, Edge computing, Lorenzo Padilla, Klint Studio">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="La Biblia de la Aceleración Web | Frontend Performance B2B">
+  <meta property="og:description" content="Guía avanzada de ingeniería de rendimiento frontend B2B. Optimiza LCP, CLS, reduce costes de servidores y elimina el software ineficiente.">
+  <meta property="og:image" content="media__1783068250608.jpg">
+
+  <!-- Google Fonts - Inter & Geist (from CDN) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Geist+Mono:wght@100..900&family=Geist:wght@100..900&family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Compiled Tailwind CSS -->
+  <link rel="stylesheet" href="dist/output.css">
+</head>
+<body class="grid-bg font-sans">
+
+  <!-- Glow Elements -->
+  <div class="absolute top-0 left-1/4 w-[500px] h-[500px] bg-brand-cyan/5 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+  <div class="absolute top-[10%] right-1/4 w-[600px] h-[600px] bg-brand-orange/5 rounded-full blur-[150px] pointer-events-none -z-10"></div>
+  <div class="absolute bottom-[20%] left-1/3 w-[450px] h-[450px] bg-brand-cyan/5 rounded-full blur-[100px] pointer-events-none -z-10"></div>
+
+  <!-- Header Section -->
+  <header class="sticky top-0 z-50 w-full border-b border-brand-border bg-brand-bg/85 backdrop-blur-md">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <span class="text-white font-bold tracking-wider text-base sm:text-lg">KLINT STUDIO</span>
+        <span class="hidden md:inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-brand-border text-slate-300 border border-slate-700/50">
+          ACADEMIA DE INGENIERÍA
+        </span>
+      </div>
+      
+      <nav class="hidden md:flex space-x-8 text-sm font-medium text-slate-400">
+        <a href="#libro" class="hover:text-white transition-colors">El Libro</a>
+        <a href="#temario" class="hover:text-white transition-colors">Temario</a>
+        <a href="#audiencia" class="hover:text-white transition-colors">Audiencia</a>
+        <a href="#autor" class="hover:text-white transition-colors">Autor</a>
+        <a href="#faq" class="hover:text-white transition-colors">FAQ</a>
+      </nav>
+
+      <div class="flex items-center">
+        <a href="#comprar" class="inline-flex items-center justify-center px-4 py-2 text-xs font-semibold text-brand-bg bg-brand-cyan hover:bg-brand-cyan/90 border border-transparent rounded-md transition-all font-sans tracking-wide">
+          Comprar ahora
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="libro" class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-12 pb-20 md:pt-20 md:pb-28">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+      
+      <!-- Copy Block -->
+      <div class="lg:col-span-7 flex flex-col space-y-6 text-center lg:text-left">
+        <div class="inline-flex items-center justify-center lg:justify-start">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold tracking-wider bg-brand-orange-glow text-brand-orange border border-brand-orange/30 uppercase">
+            Frontend Performance B2B
+          </span>
+        </div>
+        
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none text-gradient-white-slate">
+          La Biblia de la <br class="hidden sm:inline">
+          <span class="text-brand-cyan">Aceleración Web</span>
+        </h1>
+        
+        <p class="text-lg sm:text-xl font-medium text-slate-300">
+          Guía avanzada de ingeniería de rendimiento frontend B2B.
+        </p>
+        
+        <p class="text-base text-slate-400 max-w-2xl mx-auto lg:mx-0 leading-relaxed">
+          Deja de justificar el software ineficiente. Diseña pensando en el silicio, domina el renderizado crítico en la frontera de la red y reduce el Largest Contentful Paint (LCP) un 60% aplicando estrategias de arquitectura sin hidratación listas para producción.
+        </p>
+
+        <!-- Key Features Checklist -->
+        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-left max-w-lg mx-auto lg:mx-0 text-sm text-slate-300 py-2">
+          <li class="flex items-center space-x-2.5">
+            <svg class="h-4 w-4 text-brand-cyan flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>85 páginas de ingeniería pura</span>
+          </li>
+          <li class="flex items-center space-x-2.5">
+            <svg class="h-4 w-4 text-brand-cyan flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Arquitecturas Edge &amp; V8 Isolates</span>
+          </li>
+          <li class="flex items-center space-x-2.5">
+            <svg class="h-4 w-4 text-brand-cyan flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Poda radical de dependencias JS</span>
+          </li>
+          <li class="flex items-center space-x-2.5">
+            <svg class="h-4 w-4 text-brand-cyan flex-shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="3">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+            </svg>
+            <span>Configuraciones de producción</span>
+          </li>
+        </ul>
+
+        <!-- Action Buttons -->
+        <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-4 sm:space-y-0 sm:space-x-4 pt-4">
+          <a href="#comprar" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-bold text-white bg-brand-orange hover:bg-brand-orange/90 rounded-md transition-all shadow-lg border-glow-orange tracking-wide">
+            Obtener la guía por 95€ (IVA bonificado hoy)
+          </a>
+          <a href="#temario" class="w-full sm:w-auto inline-flex items-center justify-center px-8 py-4 text-sm font-semibold text-slate-300 hover:text-white bg-brand-panel/40 hover:bg-brand-panel border border-brand-border rounded-md transition-all">
+            Explorar temario
+          </a>
+        </div>
+
+        <p class="text-xs text-slate-500 italic mt-2">
+          Entrega inmediata en PDF y ePUB. Garantía de reembolso de 7 días. <span class="text-brand-orange font-semibold">⚠️ Promoción de IVA bonificado limitada a las primeras 25 unidades.</span>
+        </p>
+      </div>
+      
+      <!-- Mockup Block -->
+      <div class="lg:col-span-5 flex justify-center items-center">
+        <div class="relative group p-3 bg-slate-900/60 backdrop-blur-sm rounded-2xl border border-brand-border/60 hover:border-brand-cyan/30 transition-all duration-500 shadow-2xl">
+          <!-- Glow background card behind cover -->
+          <div class="absolute -inset-1 rounded-2xl bg-gradient-to-tr from-brand-cyan/20 to-brand-orange/20 blur opacity-40 group-hover:opacity-70 transition duration-500 -z-10"></div>
+          
+          <img src="media__1783068250608.jpg" alt="Portada de La Biblia de la Aceleración Web" class="rounded-xl w-[280px] sm:w-[320px] lg:w-[360px] aspect-[1/1.5] object-cover shadow-xl transform group-hover:scale-[1.01] transition-all duration-500">
+          
+          <div class="absolute bottom-6 left-6 right-6 p-4 rounded-lg bg-brand-bg/90 border border-brand-border/80 backdrop-blur-md flex items-center justify-between">
+            <div class="flex flex-col">
+              <span class="text-xs font-semibold text-brand-cyan tracking-wider uppercase">AUTOR</span>
+              <span class="text-sm font-bold text-white">LORENZO PADILLA</span>
+            </div>
+            <div class="text-right">
+              <span class="text-xs font-semibold text-slate-400 block">FORMATOS</span>
+              <span class="text-xs font-bold text-white bg-brand-border px-2 py-0.5 rounded">PDF + ePUB</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Metrics / Social Proof Section -->
+  <section class="border-y border-brand-border bg-slate-950/40 relative overflow-hidden">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
+      <div class="text-center max-w-3xl mx-auto mb-10">
+        <h2 class="text-xs font-bold text-brand-cyan uppercase tracking-widest">Impacto en Ingeniería y Negocio</h2>
+        <p class="text-2xl sm:text-3xl font-extrabold text-white mt-2">Rendimiento medible, retorno garantizado</p>
+      </div>
+
+      <div class="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
+        
+        <div class="bg-brand-panel/30 border border-brand-border/50 rounded-xl p-6 hover:border-slate-700 transition-colors">
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-orange">-60%</div>
+          <div class="text-sm font-bold text-slate-200 mt-1">LCP promedio</div>
+          <div class="text-xs text-slate-400 mt-2">Reducción del Largest Contentful Paint en arquitecturas sin hidratación.</div>
+        </div>
+
+        <div class="bg-brand-panel/30 border border-brand-border/50 rounded-xl p-6 hover:border-slate-700 transition-colors">
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-cyan">&lt; 1.2s</div>
+          <div class="text-sm font-bold text-slate-200 mt-1">Carga en redes 3G</div>
+          <div class="text-xs text-slate-400 mt-2">Tiempo de carga interactiva (TTI) garantizado en dispositivos móviles limitados.</div>
+        </div>
+
+        <div class="bg-brand-panel/30 border border-brand-border/50 rounded-xl p-6 hover:border-slate-700 transition-colors">
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-orange">-70%</div>
+          <div class="text-sm font-bold text-slate-200 mt-1">Uso de Hilo Principal</div>
+          <div class="text-xs text-slate-400 mt-2">Liberación de CPU al erradicar frameworks pesados y modular mediante Islas.</div>
+        </div>
+
+        <div class="bg-brand-panel/30 border border-brand-border/50 rounded-xl p-6 hover:border-slate-700 transition-colors">
+          <div class="text-3xl sm:text-4xl font-extrabold text-brand-cyan">3.2x</div>
+          <div class="text-sm font-bold text-slate-200 mt-1">Retorno de Infraestructura</div>
+          <div class="text-xs text-slate-400 mt-2">Reducción media del TCO de nube y ahorro drástico de transferencia en Edge CDNs.</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- What you will learn Section -->
+  <section id="temario" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
+    
+    <div class="flex flex-col md:flex-row md:items-end justify-between mb-16">
+      <div class="max-w-3xl">
+        <span class="text-xs font-bold text-brand-cyan uppercase tracking-widest">El Plan de Ingeniería</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">¿Qué aprenderás en este manual de campo?</h2>
+        <p class="text-slate-400 mt-4 leading-relaxed">
+          Un recorrido estructurado y sin rodeos teóricos. Del silicio y el CPU del cliente al enrutamiento físico y compresión en la frontera de la red.
+        </p>
+      </div>
+      <div class="mt-4 md:mt-0">
+        <span class="text-sm font-mono text-slate-500">Documentación de Arquitectura de Producción</span>
+      </div>
+    </div>
+
+    <!-- Syllabus Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8">
+      
+      <!-- Chap 1 -->
+      <div class="bg-brand-panel/20 border border-brand-border rounded-xl p-6 lg:p-8 hover:border-brand-cyan/20 transition-all duration-300">
+        <div class="flex items-center space-x-3 text-brand-cyan font-mono text-xs font-semibold mb-4">
+          <span class="px-2 py-0.5 rounded bg-brand-cyan-glow border border-brand-cyan/20">CAPÍTULO 01</span>
+          <span>1.0.0</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">La anatomía del software sobredimensionado</h3>
+        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+          Entiende los límites físicos de la CPU del usuario. Analizamos la hipertrofia del software moderno y por qué la hidratación se ha convertido en un impuesto insostenible para el silicio móvil.
+        </p>
+        <ul class="text-xs text-slate-400 space-y-2 border-t border-brand-border/60 pt-4 font-mono">
+          <li class="flex items-start">
+            <span class="text-brand-orange mr-2">→</span>
+            <span>Islas de interactividad (client:load, client:idle, client:visible)</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-orange mr-2">→</span>
+            <span>Resumabilidad vs Hidratación: eliminar ejecución inicial</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-orange mr-2">→</span>
+            <span>Manual de poda radical de JavaScript y Bundle Budgets en CI/CD</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Chap 2 -->
+      <div class="bg-brand-panel/20 border border-brand-border rounded-xl p-6 lg:p-8 hover:border-brand-orange/20 transition-all duration-300">
+        <div class="flex items-center space-x-3 text-brand-orange font-mono text-xs font-semibold mb-4">
+          <span class="px-2 py-0.5 rounded bg-brand-orange-glow border border-brand-orange/20">CAPÍTULO 02</span>
+          <span>2.0.0</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">El camino del renderizado crítico</h3>
+        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+          Optimiza la ruta de renderizado visual del navegador. Controla al milisegundo el Largest Contentful Paint (LCP) y anula por completo el Cumulative Layout Shift (CLS).
+        </p>
+        <ul class="text-xs text-slate-400 space-y-2 border-t border-brand-border/60 pt-4 font-mono">
+          <li class="flex items-start">
+            <span class="text-brand-cyan mr-2">→</span>
+            <span>Los cuatro subtiempos del LCP y fetchpriority="high"</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-cyan mr-2">→</span>
+            <span>CSS Inline inyectado dinámicamente en compilación</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-cyan mr-2">→</span>
+            <span>Aceleración por GPU en CSS y content-visibility: auto</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Chap 3 -->
+      <div class="bg-brand-panel/20 border border-brand-border rounded-xl p-6 lg:p-8 hover:border-brand-orange/20 transition-all duration-300">
+        <div class="flex items-center space-x-3 text-brand-orange font-mono text-xs font-semibold mb-4">
+          <span class="px-2 py-0.5 rounded bg-brand-orange-glow border border-brand-orange/20">CAPÍTULO 03</span>
+          <span>3.0.0</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Enrutamiento CDN, HTTP y Stale-While-Revalidate</h3>
+        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+          Distribuye tu interfaz lo más cerca posible del cliente físico. Minimiza el handshake de conexión e implementa caching avanzado sin sacrificar consistencia de datos.
+        </p>
+        <ul class="text-xs text-slate-400 space-y-2 border-t border-brand-border/60 pt-4 font-mono">
+          <li class="flex items-start">
+            <span class="text-brand-cyan mr-2">→</span>
+            <span>Enrutamiento global con redes Anycast Edge y protocolo BGP</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-cyan mr-2">→</span>
+            <span>Estrategias Stale-While-Revalidate en Edge y Service Workers</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-cyan mr-2">→</span>
+            <span>Directivas de red y CSP estricto sin penalizar velocidad</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Chap 4 -->
+      <div class="bg-brand-panel/20 border border-brand-border rounded-xl p-6 lg:p-8 hover:border-brand-cyan/20 transition-all duration-300">
+        <div class="flex items-center space-x-3 text-brand-cyan font-mono text-xs font-semibold mb-4">
+          <span class="px-2 py-0.5 rounded bg-brand-cyan-glow border border-brand-cyan/20">CAPÍTULO 04</span>
+          <span>4.0.0</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Ingeniería multimedia y de imágenes</h3>
+        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+          Automatiza la optimización visual de forma industrial. Convierte, escala e inyecta layouts adaptativos directamente en el flujo de integración de tu equipo.
+        </p>
+        <ul class="text-xs text-slate-400 space-y-2 border-t border-brand-border/60 pt-4 font-mono">
+          <li class="flex items-start">
+            <span class="text-brand-orange mr-2">→</span>
+            <span>Transformación a AVIF y WebP en CI/CD con sharp</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-orange mr-2">→</span>
+            <span>Negociación de contenido nativa mediante &lt;picture&gt; y breakpoints</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-orange mr-2">→</span>
+            <span>Placeholders en Base64/BlurHash y decodificación asíncrona</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Chap 5 -->
+      <div class="bg-brand-panel/20 border border-brand-border rounded-xl p-6 lg:p-8 hover:border-brand-cyan/20 transition-all duration-300">
+        <div class="flex items-center space-x-3 text-brand-cyan font-mono text-xs font-semibold mb-4">
+          <span class="px-2 py-0.5 rounded bg-brand-cyan-glow border border-brand-cyan/20">CAPÍTULO 05</span>
+          <span>5.0.0</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Protocolos de red y conectividad (HTTP/3)</h3>
+        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+          Supera las ineficiencias clásicas de TCP. Comprendemos la multiplexación nativa y cómo exprimir HTTP/3 y el protocolo QUIC sobre conexiones inalámbricas hostiles.
+        </p>
+        <ul class="text-xs text-slate-400 space-y-2 border-t border-brand-border/60 pt-4 font-mono">
+          <li class="flex items-start">
+            <span class="text-brand-orange mr-2">→</span>
+            <span>Eliminación de bloqueo de cabecera de línea con QUIC y UDP</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-orange mr-2">→</span>
+            <span>Optimización preventiva con Early Hints (HTTP 103)</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-orange mr-2">→</span>
+            <span>Calentamiento de conexión con dns-prefetch, preconnect y preload</span>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Chap 6 -->
+      <div class="bg-brand-panel/20 border border-brand-border rounded-xl p-6 lg:p-8 hover:border-brand-orange/20 transition-all duration-300">
+        <div class="flex items-center space-x-3 text-brand-orange font-mono text-xs font-semibold mb-4">
+          <span class="px-2 py-0.5 rounded bg-brand-orange-glow border border-brand-orange/20">CAPÍTULO 06</span>
+          <span>6.0.0</span>
+        </div>
+        <h3 class="text-xl font-bold text-white mb-3">Rendimiento en Servidor y Edge APIs</h3>
+        <p class="text-sm text-slate-400 mb-4 leading-relaxed">
+          Diseña arquitecturas en el Edge con la mínima latencia. Olvídate del serverless tradicional lento e implementa middleware ligero en V8 Isolates.
+        </p>
+        <ul class="text-xs text-slate-400 space-y-2 border-t border-brand-border/60 pt-4 font-mono">
+          <li class="flex items-start">
+            <span class="text-brand-cyan mr-2">→</span>
+            <span>V8 Isolates y Edge Functions frente a contenedores monolíticos</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-cyan mr-2">→</span>
+            <span>Capa Backend For Frontend (BFF) con tipado seguro en tRPC</span>
+          </li>
+          <li class="flex items-start">
+            <span class="text-brand-cyan mr-2">→</span>
+            <span>Brotli dinámico con diccionarios estáticos personalizados</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Extra appendix highlights card -->
+    <div class="mt-8 bg-brand-panel/10 border border-brand-border/60 rounded-xl p-6 flex flex-col md:flex-row items-center justify-between">
+      <div class="flex items-center space-x-4 mb-4 md:mb-0">
+        <div class="bg-brand-orange/10 p-3 rounded-lg border border-brand-orange/20 text-brand-orange font-mono text-lg font-bold">
+          +8
+        </div>
+        <div>
+          <h4 class="text-white font-bold text-sm">Apéndices y Recursos Especiales Incluidos</h4>
+          <p class="text-xs text-slate-400">Auditoría en 10 min para CTOs, Casos de Negocio, Glosario Completo y plantillas de configuración.</p>
+        </div>
+      </div>
+      <a href="#comprar" class="text-xs font-semibold text-brand-cyan hover:underline flex items-center space-x-1">
+        <span>Ver precios de lanzamiento</span>
+        <span>→</span>
+      </a>
+    </div>
+
+  </section>
+
+  <!-- Target Audience Section -->
+  <section id="audiencia" class="border-t border-brand-border bg-slate-950/30">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28">
+      
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <span class="text-xs font-bold text-brand-cyan uppercase tracking-widest">¿Para quién es este libro?</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-2">Diseñado para la élite técnica del Frontend B2B</h2>
+        <p class="text-slate-400 mt-4 text-base">
+          No enseñamos HTML o los rudimentos de JavaScript. Este manual está diseñado para ingenieros senior y líderes técnicos que necesitan maximizar conversiones y optimizar costes de sistemas.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        
+        <!-- Frontend Architects -->
+        <div class="bg-brand-panel/20 border border-brand-border rounded-xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="h-10 w-10 rounded-lg bg-brand-cyan/10 border border-brand-cyan/20 flex items-center justify-center text-brand-cyan mb-6">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Arquitectos Frontend</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Diseña arquitecturas desacopladas, estables y limpias. Aprende a justificar decisiones técnicas basándote en la eficiencia computacional y a evitar la sobrecarga masiva de frameworks.
+            </p>
+          </div>
+          <span class="text-xs font-mono text-brand-cyan mt-6 block">Enfoque: Escalabilidad y Estabilidad</span>
+        </div>
+
+        <!-- Tech Leads / CTOs -->
+        <div class="bg-brand-panel/20 border border-brand-border rounded-xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="h-10 w-10 rounded-lg bg-brand-orange/10 border border-brand-orange/20 flex items-center justify-center text-brand-orange mb-6">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 002 2h2a2 2 0 002-2z" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Tech Leads &amp; CTOs</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Instaura presupuestos de rendimiento (Performance Budgets) objetivos en el pipeline de CI/CD. Aprende a calcular el ROI real de la velocidad y a recortar drásticamente los costes de cómputo en la nube.
+            </p>
+          </div>
+          <span class="text-xs font-mono text-brand-orange mt-6 block">Enfoque: Costes de Infraestructura e Ingresos B2B</span>
+        </div>
+
+        <!-- Senior Developers -->
+        <div class="bg-brand-panel/20 border border-brand-border rounded-xl p-8 flex flex-col justify-between">
+          <div>
+            <div class="h-10 w-10 rounded-lg bg-brand-cyan/10 border border-brand-cyan/20 flex items-center justify-center text-brand-cyan mb-6">
+              <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+              </svg>
+            </div>
+            <h3 class="text-lg font-bold text-white mb-3">Senior Developers</h3>
+            <p class="text-sm text-slate-400 leading-relaxed">
+              Escribe código que interactúe perfectamente con los motores V8 de los navegadores. Domina las entrañas de los hilos de ejecución, la carga asíncrona de recursos y el renderizado optimizado por hardware GPU.
+            </p>
+          </div>
+          <span class="text-xs font-mono text-brand-cyan mt-6 block">Enfoque: Implementación de Código de Alto Rendimiento</span>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Author Section -->
+  <section id="autor" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-28 relative">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <div class="lg:col-span-5 flex justify-center">
+        <!-- Accent circles around author placeholder/info -->
+        <div class="relative">
+          <div class="absolute -inset-2 bg-gradient-to-r from-brand-cyan/35 to-brand-orange/35 rounded-full blur opacity-30"></div>
+          <div class="w-48 h-48 sm:w-64 sm:h-64 rounded-full bg-slate-900 border-2 border-brand-border flex items-center justify-center p-4">
+            <div class="text-center">
+              <span class="text-xs font-bold text-brand-orange uppercase block tracking-wider">Autor</span>
+              <span class="text-lg font-extrabold text-white block mt-1">LORENZO PADILLA</span>
+              <span class="text-[10px] font-mono text-slate-400 mt-2 block border-t border-brand-border pt-2 max-w-[150px] mx-auto">
+                Consultor Tecnológico &amp; Arquitecto de Sistemas
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="lg:col-span-7 flex flex-col space-y-6">
+        <span class="text-xs font-bold text-brand-cyan uppercase tracking-widest">Sobre el Autor</span>
+        <h2 class="text-3xl font-extrabold text-white">Pensamiento de eficiencia industrial trasladado al frontend</h2>
+        
+        <p class="text-slate-300 text-sm leading-relaxed">
+          Lorenzo Padilla Fernández es consultor tecnológico y arquitecto de sistemas con una trayectoria profesional de más de tres décadas. Su recorrido nace en el sector industrial, la ingeniería de automatización y la gestión de proyectos técnicos complejos de alta exigencia.
+        </p>
+        
+        <p class="text-slate-400 text-sm leading-relaxed">
+          De esta experiencia procede su enfoque del software, aplicando los principios de la optimización industrial al desarrollo web: eliminar ineficiencias de forma sistemática, exprimir al máximo el hardware disponible y diseñar estructuras limpias, seguras y altamente escalables.
+        </p>
+
+        <p class="text-slate-400 text-sm leading-relaxed">
+          Es fundador y director de <strong class="text-slate-200">Klint Studio</strong>, estudio tecnológico especializado en desarrollo web de alto rendimiento, y de <strong class="text-slate-200">Prospectalia B2B</strong>, consultora de inteligencia comercial automatizada. Ambos proyectos descartan gestores de contenido inflados y concentran su ingeniería en arquitecturas nativas, rápidas y eficientes pensadas para optimizar el consumo de CPU.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final CTA Section -->
+  <section id="comprar" class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24">
+    <div class="relative rounded-2xl bg-brand-panel/40 border border-brand-border overflow-hidden p-8 sm:p-12 md:p-16">
+      
+      <!-- Ambient light on corners -->
+      <div class="absolute -top-12 -right-12 w-64 h-64 bg-brand-orange/10 rounded-full blur-[80px] pointer-events-none"></div>
+      <div class="absolute -bottom-12 -left-12 w-64 h-64 bg-brand-cyan/10 rounded-full blur-[80px] pointer-events-none"></div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center relative z-10">
+        
+        <div class="lg:col-span-7 space-y-6 text-center lg:text-left">
+          <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold tracking-wider bg-brand-cyan-glow text-brand-cyan border border-brand-cyan/20 uppercase">
+            Oferta de Lanzamiento
+          </span>
+          <h3 class="text-2xl sm:text-3xl font-extrabold text-white">
+            Devuelve tus proyectos al estado óptimo. Escribe pensando en el silicio.
+          </h3>
+          <p class="text-slate-400 text-sm leading-relaxed">
+            Consigue acceso inmediato a <strong>La Biblia de la Aceleración Web</strong> en formatos PDF y ePUB. Incluye todas las futuras actualizaciones gratuitas de por vida.
+          </p>
+
+          <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start space-y-3 sm:space-y-0 sm:space-x-6 py-2 text-xs font-mono text-slate-300">
+            <span class="flex items-center">
+              <svg class="h-4 w-4 text-brand-cyan mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              PDF Optimizado para lectura técnica
+            </span>
+            <span class="flex items-center">
+              <svg class="h-4 w-4 text-brand-cyan mr-1.5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.5">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M5 13l4 4L19 7" />
+              </svg>
+              Formato ePUB responsive
+            </span>
+          </div>
+        </div>
+
+        <div class="lg:col-span-5 bg-brand-bg/80 border border-brand-border p-6 rounded-xl text-center shadow-xl">
+          <div class="text-sm font-semibold text-slate-400 tracking-wide">PRECIO DE LANZAMIENTO</div>
+          <div class="flex items-center justify-center space-x-3 mt-2">
+            <span class="text-slate-500 line-through text-lg font-bold">115€</span>
+            <span class="text-white text-4xl sm:text-5xl font-extrabold tracking-tight">95€</span>
+          </div>
+          <span class="mt-3 inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold bg-brand-cyan-glow text-brand-cyan border border-brand-cyan/20">
+            🔥 ¡IVA 100% bonificado si compras hoy!
+          </span>
+          <p class="text-[11px] text-brand-orange font-mono font-semibold mt-2">
+            ⚠️ Limitado a las primeras 25 unidades (Quedan pocas)
+          </p>
+
+          <!-- Real CTA button link to Hotmart -->
+          <a href="https://pay.hotmart.com/C106590705W" target="_blank" rel="noopener noreferrer" class="mt-6 w-full inline-flex items-center justify-center px-6 py-4 text-sm font-bold text-brand-bg bg-brand-cyan hover:bg-brand-cyan/90 border border-transparent rounded-md transition-all shadow-lg border-glow-cyan tracking-wide">
+            Comprar ahora en Hotmart
+          </a>
+
+          <div class="mt-4 text-[10px] text-slate-500 flex items-center justify-center space-x-2">
+            <svg class="h-3 w-3" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/>
+            </svg>
+            <span>Pago seguro. Garantía de reembolso de 7 días.</span>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQs Section -->
+  <section id="faq" class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-24 border-t border-brand-border">
+    
+    <div class="text-center mb-12">
+      <span class="text-xs font-bold text-brand-cyan uppercase tracking-widest">Preguntas Frecuentes</span>
+      <h2 class="text-2xl sm:text-3xl font-extrabold text-white mt-1">Resolviendo dudas técnicas</h2>
+    </div>
+
+    <div class="space-y-4">
+      
+      <details class="group bg-brand-panel/15 border border-brand-border rounded-lg p-5 [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+          <h3 class="text-base font-bold text-white pr-4">
+            ¿A quién va dirigido este libro exactamente?
+          </h3>
+          <span class="relative flex-shrink-0 ml-1.5 w-5 h-5">
+            <svg class="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+            <svg class="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
+            </svg>
+          </span>
+        </summary>
+        <p class="mt-4 text-sm text-slate-400 leading-relaxed border-t border-brand-border/40 pt-4">
+          Está escrito para ingenieros frontend senior, arquitectos de software, tech leads y directores de tecnología (CTOs) que trabajan en entornos B2B o SaaS donde el rendimiento y la optimización de costes influyen directamente en la conversión y la retención del cliente empresarial. No es un manual introductorio de desarrollo web.
+        </p>
+      </details>
+
+      <details class="group bg-brand-panel/15 border border-brand-border rounded-lg p-5 [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+          <h3 class="text-base font-bold text-white pr-4">
+            ¿Qué formatos incluye la compra?
+          </h3>
+          <span class="relative flex-shrink-0 ml-1.5 w-5 h-5">
+            <svg class="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+            <svg class="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
+            </svg>
+          </span>
+        </summary>
+        <p class="mt-4 text-sm text-slate-400 leading-relaxed border-t border-brand-border/40 pt-4">
+          La compra incluye la descarga inmediata de dos archivos optimizados electrónicamente: una versión PDF de alta fidelidad maquetada cuidadosamente para lectura en pantallas, y una versión ePUB responsive para lectores de libros electrónicos clásicos y dispositivos móviles.
+        </p>
+      </details>
+
+      <details class="group bg-brand-panel/15 border border-brand-border rounded-lg p-5 [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+          <h3 class="text-base font-bold text-white pr-4">
+            ¿Cómo funciona la garantía de reembolso?
+          </h3>
+          <span class="relative flex-shrink-0 ml-1.5 w-5 h-5">
+            <svg class="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+            <svg class="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
+            </svg>
+          </span>
+        </summary>
+        <p class="mt-4 text-sm text-slate-400 leading-relaxed border-t border-brand-border/40 pt-4">
+          Si el contenido no aporta valor a tu flujo de trabajo o no descubres ninguna técnica avanzada nueva durante los primeros 7 días posteriores a tu compra, puedes solicitar la devolución completa y directa de tu dinero a través de la plataforma segura de Hotmart. Sin preguntas ni cuestionamientos.
+        </p>
+      </details>
+
+      <details class="group bg-brand-panel/15 border border-brand-border rounded-lg p-5 [&_summary::-webkit-details-marker]:hidden">
+        <summary class="flex items-center justify-between cursor-pointer focus:outline-none">
+          <h3 class="text-base font-bold text-white pr-4">
+            ¿Obtengo futuras actualizaciones del libro?
+          </h3>
+          <span class="relative flex-shrink-0 ml-1.5 w-5 h-5">
+            <svg class="absolute inset-0 w-5 h-5 opacity-100 group-open:opacity-0 transition-opacity duration-300 text-slate-400" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M12 4v16m8-8H4" />
+            </svg>
+            <svg class="absolute inset-0 w-5 h-5 opacity-0 group-open:opacity-100 transition-opacity duration-300 text-brand-cyan" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M20 12H4" />
+            </svg>
+          </span>
+        </summary>
+        <p class="mt-4 text-sm text-slate-400 leading-relaxed border-t border-brand-border/40 pt-4">
+          Sí. El ecosistema web evoluciona de manera continua. Cuando publiquemos revisiones con nuevos estándares, optimizaciones y análisis de casos reales, recibirás un enlace de descarga directa en tu correo registrado de forma completamente gratuita.
+        </p>
+      </details>
+
+    </div>
+
+  </section>
+
+  <!-- Footer Section -->
+  <footer class="border-t border-brand-border bg-slate-950/80 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center sm:text-left flex flex-col sm:flex-row items-center justify-between">
+      <div class="space-y-2 mb-6 sm:mb-0">
+        <span class="text-white font-bold tracking-wider">KLINT STUDIO</span>
+        <p class="text-xs text-slate-500">© 2026 Lorenzo Padilla Fernández. Todos los derechos reservados.</p>
+      </div>
+
+      <div class="flex flex-wrap justify-center sm:justify-start gap-6 text-xs text-slate-400">
+        <a href="https://klintstudio.es" target="_blank" rel="noopener noreferrer" class="hover:text-white transition-colors">klintstudio.es</a>
+        <span class="text-slate-700">|</span>
+        <a href="mailto:hola@klintstudio.es" class="hover:text-white transition-colors">hola@klintstudio.es</a>
+        <span class="text-slate-700">|</span>
+        <a href="#" class="hover:text-white transition-colors">Aviso Legal</a>
+        <span class="text-slate-700">|</span>
+        <a href="#" class="hover:text-white transition-colors">Política de Privacidad</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

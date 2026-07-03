@@ -1,0 +1,26 @@
+{
+  "name": "la-biblia-aceleracion-web-landing",
+  "version": "1.0.0",
+  "description": "High-converting, ultra-fast landing page for the book La Biblia de la Aceleración Web",
+  "main": "index.html",
+  "scripts": {
+    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
+    "dev": "concurrently \"npm run watch\" \"lite-server\""
+  },
+  "keywords": [
+    "performance",
+    "frontend",
+    "landing-page",
+    "tailwind"
+  ],
+  "author": "Lorenzo Padilla Fernández",
+  "license": "ISC",
+  "devDependencies": {
+    "autoprefixer": "^10.4.19",
+    "concurrently": "^8.2.2",
+    "lite-server": "^2.6.1",
+    "postcss": "^8.4.38",
+    "tailwindcss": "^3.4.4"
+  }
+}
