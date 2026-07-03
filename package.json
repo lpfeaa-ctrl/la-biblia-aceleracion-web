@@ -4,7 +4,8 @@
   "description": "High-converting, ultra-fast landing page for the book La Biblia de la Aceleración Web",
   "main": "index.html",
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
+    "build": "echo 'Deploying precompiled static files'",
+    "build:local": "tailwindcss -i ./src/input.css -o ./dist/output.css --minify",
     "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch",
     "dev": "concurrently \"npm run watch\" \"lite-server\""
   },
